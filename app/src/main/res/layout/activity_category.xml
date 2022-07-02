@@ -1,0 +1,293 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/banknote"
+    android:backgroundTint="@color/colorAccent"
+    tools:context=".Category">
+
+    <TextView
+        android:id="@+id/categoryTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="143dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="142dp"
+        android:text="Category"
+        android:textAlignment="center"
+        android:textColor="#000000"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/catEntertainmentTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="41dp"
+        android:layout_marginTop="73dp"
+        android:text="Entertainment"
+        android:textAlignment="textStart"
+        android:textColor="#000000"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/catEducationTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="41dp"
+        android:layout_marginTop="25dp"
+        android:text="Education"
+        android:textAlignment="textStart"
+        android:textColor="#000000"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/catEntertainmentTV" />
+
+    <TextView
+        android:id="@+id/catHealthTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="41dp"
+        android:layout_marginTop="25dp"
+        android:text="Health"
+        android:textAlignment="textStart"
+        android:textColor="#000000"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/catEducationTV" />
+
+    <TextView
+        android:id="@+id/catTransportTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="41dp"
+        android:layout_marginTop="25dp"
+        android:text="Transport"
+        android:textAlignment="textStart"
+        android:textColor="#000000"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/catHealthTV" />
+
+    <TextView
+        android:id="@+id/catShoppingTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="41dp"
+        android:layout_marginTop="25dp"
+        android:text="Shopping"
+        android:textAlignment="textStart"
+        android:textColor="#000000"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/catTransportTV" />
+
+    <TextView
+        android:id="@+id/catPersonalCareTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="41dp"
+        android:layout_marginTop="25dp"
+        android:text="Personal care"
+        android:textAlignment="textStart"
+        android:textColor="#000000"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/catShoppingTV" />
+
+    <TextView
+        android:id="@+id/catBillsTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="41dp"
+        android:layout_marginTop="25dp"
+        android:text="Bills"
+        android:textAlignment="textStart"
+        android:textColor="#000000"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/catPersonalCareTV" />
+
+    <TextView
+        android:id="@+id/catFoodTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="41dp"
+        android:layout_marginTop="25dp"
+        android:text="Food"
+        android:textAlignment="textStart"
+        android:textColor="#000000"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/catBillsTV" />
+
+    <ImageButton
+        android:id="@+id/catEntertainmentPlusMinus"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:layout_marginTop="73dp"
+        android:layout_marginEnd="82dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageButton
+        android:id="@+id/catEducationPlusMinus"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:layout_marginTop="25dp"
+        android:layout_marginEnd="82dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/catEntertainmentPlusMinus" />
+
+    <ImageButton
+        android:id="@+id/catHealthPlusMinus"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:layout_marginTop="25dp"
+        android:layout_marginEnd="82dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/catEducationPlusMinus" />
+
+    <ImageButton
+        android:id="@+id/catTransportPlusMinus"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:layout_marginTop="25dp"
+        android:layout_marginEnd="82dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/catHealthPlusMinus" />
+
+    <ImageButton
+        android:id="@+id/catShoppingPlusMinus"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:layout_marginTop="25dp"
+        android:layout_marginEnd="82dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/catTransportPlusMinus" />
+
+    <ImageButton
+        android:id="@+id/catPersonalCarePlusMinus"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:layout_marginTop="25dp"
+        android:layout_marginEnd="82dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/catShoppingPlusMinus" />
+
+    <ImageButton
+        android:id="@+id/catBillsPlusMinus"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:layout_marginTop="25dp"
+        android:layout_marginEnd="82dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/catPersonalCarePlusMinus" />
+
+    <ImageButton
+        android:id="@+id/catFoodPlusMinus"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:layout_marginTop="25dp"
+        android:layout_marginEnd="82dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/catBillsPlusMinus" />
+
+    <ImageButton
+        android:id="@+id/backButton"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/roundleftbutton"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageButton
+        android:id="@+id/addBudgetEntertainment"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:layout_marginTop="73dp"
+        android:layout_marginEnd="16dp"
+        android:background="@drawable/settings"
+        app:layout_constraintEnd_toStartOf="@+id/catEntertainmentPlusMinus"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageButton
+        android:id="@+id/addBudgetEducation"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:layout_marginTop="25dp"
+        android:layout_marginEnd="16dp"
+        android:background="@drawable/settings"
+        app:layout_constraintEnd_toStartOf="@+id/catEducationPlusMinus"
+        app:layout_constraintTop_toBottomOf="@+id/addBudgetEntertainment" />
+
+    <ImageButton
+        android:id="@+id/addBudgetHealth"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:layout_marginTop="25dp"
+        android:layout_marginEnd="16dp"
+        android:background="@drawable/settings"
+        app:layout_constraintEnd_toStartOf="@+id/catHealthPlusMinus"
+        app:layout_constraintTop_toBottomOf="@+id/addBudgetEducation" />
+
+    <ImageButton
+        android:id="@+id/addBudgetTransport"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:layout_marginTop="25dp"
+        android:layout_marginEnd="16dp"
+        android:background="@drawable/settings"
+        app:layout_constraintEnd_toStartOf="@+id/catTransportPlusMinus"
+        app:layout_constraintTop_toBottomOf="@+id/addBudgetHealth" />
+
+    <ImageButton
+        android:id="@+id/addBudgetShopping"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:layout_marginTop="25dp"
+        android:layout_marginEnd="16dp"
+        android:background="@drawable/settings"
+        app:layout_constraintEnd_toStartOf="@+id/catShoppingPlusMinus"
+        app:layout_constraintTop_toBottomOf="@+id/addBudgetTransport" />
+
+    <ImageButton
+        android:id="@+id/addBudgetPersonalCare"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:layout_marginTop="25dp"
+        android:layout_marginEnd="16dp"
+        android:background="@drawable/settings"
+        app:layout_constraintEnd_toStartOf="@+id/catPersonalCarePlusMinus"
+        app:layout_constraintTop_toBottomOf="@+id/addBudgetShopping" />
+
+    <ImageButton
+        android:id="@+id/addBudgetBills"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:layout_marginTop="25dp"
+        android:layout_marginEnd="16dp"
+        android:background="@drawable/settings"
+        app:layout_constraintEnd_toStartOf="@+id/catBillsPlusMinus"
+        app:layout_constraintTop_toBottomOf="@+id/addBudgetPersonalCare" />
+
+    <ImageButton
+        android:id="@+id/addBudgetFood"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:layout_marginTop="25dp"
+        android:layout_marginEnd="16dp"
+        android:background="@drawable/settings"
+        app:layout_constraintEnd_toStartOf="@+id/catFoodPlusMinus"
+        app:layout_constraintTop_toBottomOf="@+id/addBudgetBills" />
+
+</android.support.constraint.ConstraintLayout>

@@ -11,108 +11,92 @@
     <android.support.constraint.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@drawable/banknote"
+        android:background="@drawable/cash_flow"
         android:backgroundTint="@color/colorAccent">
-
-        <com.github.mikephil.charting.charts.PieChart
-            android:id="@+id/idPieChart"
-            android:layout_width="250dp"
-            android:layout_height="250dp"
-            android:layout_marginStart="32dp"
-            android:layout_marginTop="34dp"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/MonthLabel">
-
-        </com.github.mikephil.charting.charts.PieChart>
 
         <ImageButton
             android:id="@+id/catEntertainment"
-            android:layout_width="35dp"
-            android:layout_height="35dp"
-            android:layout_marginTop="26dp"
-            android:layout_marginEnd="16dp"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="77dp"
+            android:layout_marginEnd="50dp"
             android:background="@drawable/joystick"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintEnd_toStartOf="@+id/catEducation"
+            app:layout_constraintTop_toBottomOf="@+id/MonthLabel" />
 
         <ImageButton
             android:id="@+id/catEducation"
-            android:layout_width="35dp"
-            android:layout_height="35dp"
-            android:layout_marginTop="12dp"
-            android:layout_marginEnd="16dp"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="77dp"
+            android:layout_marginBottom="50dp"
             android:background="@drawable/openbook"
+            app:layout_constraintBottom_toTopOf="@+id/catPersonalCare"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/catEntertainment" />
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/MonthLabel" />
 
         <ImageButton
             android:id="@+id/catHealthButton"
-            android:layout_width="35dp"
-            android:layout_height="35dp"
-            android:layout_marginTop="12dp"
-            android:layout_marginEnd="16dp"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="48dp"
+            android:layout_marginTop="77dp"
             android:background="@drawable/heart"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/catEducation" />
+            app:layout_constraintStart_toEndOf="@+id/catEducation"
+            app:layout_constraintTop_toBottomOf="@+id/MonthLabel" />
 
         <ImageButton
             android:id="@+id/catTransport"
-            android:layout_width="35dp"
-            android:layout_height="35dp"
-            android:layout_marginTop="12dp"
-            android:layout_marginEnd="16dp"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="50dp"
             android:background="@drawable/car"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/catFood" />
-
-        <ImageButton
-            android:id="@+id/catShopping"
-            android:layout_width="35dp"
-            android:layout_height="35dp"
-            android:layout_marginTop="12dp"
-            android:layout_marginEnd="16dp"
-            android:background="@drawable/shoppingcart"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/catHealthButton" />
-
-        <ImageButton
-            android:id="@+id/catPersonalCare"
-            android:layout_width="35dp"
-            android:layout_height="35dp"
-            android:layout_marginTop="12dp"
-            android:layout_marginEnd="16dp"
-            android:background="@drawable/haircuttool"
-            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/catPersonalCare"
+            app:layout_constraintStart_toEndOf="@+id/catShopping"
             app:layout_constraintTop_toBottomOf="@+id/catShopping" />
 
         <ImageButton
-            android:id="@+id/catBills"
-            android:layout_width="35dp"
-            android:layout_height="35dp"
-            android:layout_marginTop="12dp"
-            android:layout_marginEnd="16dp"
-            android:background="@drawable/banknote"
+            android:id="@+id/catShopping"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="50dp"
+            android:layout_marginEnd="50dp"
+            android:background="@drawable/shoppingcart"
+            app:layout_constraintEnd_toStartOf="@+id/catPersonalCare"
+            app:layout_constraintTop_toBottomOf="@+id/catEntertainment" />
+
+        <ImageButton
+            android:id="@+id/catPersonalCare"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="50dp"
+            android:background="@drawable/haircuttool"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/catTransport" />
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/catEducation" />
+
+        <ImageButton
+            android:id="@+id/catBills"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="50dp"
+            android:layout_marginTop="50dp"
+            android:background="@drawable/banknote"
+            app:layout_constraintStart_toEndOf="@+id/catTransport"
+            app:layout_constraintTop_toBottomOf="@+id/catPersonalCare" />
 
         <ImageButton
             android:id="@+id/catFood"
-            android:layout_width="35dp"
-            android:layout_height="35dp"
-            android:layout_marginTop="12dp"
-            android:layout_marginEnd="16dp"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="50dp"
+            android:layout_marginTop="50dp"
             android:background="@drawable/dish"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/catPersonalCare" />
-        <ImageButton
-            android:id="@+id/payNow"
-            android:layout_width="35dp"
-            android:layout_height="35dp"
-            android:layout_marginTop="12dp"
-            android:layout_marginEnd="16dp"
-            android:background="@drawable/paynow"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/catFood" />
+            app:layout_constraintStart_toEndOf="@+id/catPersonalCare"
+            app:layout_constraintTop_toBottomOf="@+id/catHealthButton" />
 
         <TextView
             android:id="@+id/MonthLabel"
@@ -124,7 +108,7 @@
             android:text="month"
             android:textAlignment="center"
             android:textColor="#000000"
-            android:textSize="18sp"
+            android:textSize="20sp"
             android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.47"

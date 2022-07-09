@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/banknote"
+    android:background="@drawable/cash_flow"
     android:backgroundTint="@color/colorAccent"
     android:padding="10dp"
     tools:context=".RegisterActivity">
@@ -13,11 +13,11 @@
         android:id="@+id/btnRegister"
         android:layout_width="190dp"
         android:layout_height="50dp"
-        android:layout_marginBottom="224dp"
+        android:layout_marginBottom="232dp"
         android:text="Register"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="@+id/repassword"
-        app:layout_constraintHorizontal_bias="0.134"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/repassword" />
 
     <EditText
@@ -75,16 +75,16 @@
 
     <TextView
         android:id="@+id/btnForget"
-        android:layout_width="108dp"
-        android:layout_height="24dp"
-        android:text="Forget Password"
+        android:layout_width="132dp"
+        android:layout_height="26dp"
+        android:text="Forgot Password?"
         android:textColor="@color/lightRed"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="@+id/btnLogin"
-        app:layout_constraintHorizontal_bias="0.274"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/btnLogin"
         app:layout_constraintTop_toBottomOf="@+id/btnLogin"
-        app:layout_constraintVertical_bias="0.159" />
+        app:layout_constraintVertical_bias="0.173" />
 
     <TextView
         android:id="@+id/textView"
@@ -93,6 +93,7 @@
         android:layout_marginTop="10dp"
         android:text="Registration"
         android:textAlignment="center"
+        android:textColor="#000000"
         android:textSize="23sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/username"
@@ -108,9 +109,9 @@
         android:textSize="16sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="@+id/btnRegister"
-        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/btnRegister"
         app:layout_constraintTop_toBottomOf="@+id/btnRegister"
-        app:layout_constraintVertical_bias="0.162"
+        app:layout_constraintVertical_bias="0.164"
         tools:ignore="MissingConstraints" />
 </android.support.constraint.ConstraintLayout>

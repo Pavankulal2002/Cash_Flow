@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/banknote"
+    android:background="@drawable/cash_flow"
     android:backgroundTint="@color/colorAccent"
     tools:context=".History"
     tools:layout_editor_absoluteY="25dp">

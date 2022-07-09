@@ -2,8 +2,8 @@ package com.pavanpradeep.cashflow;
 
 import android.content.Intent;
 import android.database.Cursor;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
 import android.widget.ImageButton;
@@ -16,7 +16,7 @@ import java.text.DecimalFormat;
 public class Saving extends AppCompatActivity implements View.OnClickListener {
 
     //Log
-    private static String TAG = "Savings";
+    private static final String TAG = "Savings";
 
     //Database
     DatabaseHelper myDB;
@@ -27,8 +27,8 @@ public class Saving extends AppCompatActivity implements View.OnClickListener {
     ImageView moneyIcon;
 
     //Variable to use
-    private String[] monthInWords = {"JANUARY", "FEBRUARY", "MARCH", "APRIL", "MAY", "JUNE", "JULY", "AUGUST", "SEPTEMBER", "OCTOBER", "NOVEMBER", "DECEMBER"};
-    private String[] monthInNumber = {"202201", "202202", "202203", "202204", "202205", "202206", "202207", "202208", "202209", "202210", "202211", "202212"};
+    private final String[] monthInWords = {"JANUARY", "FEBRUARY", "MARCH", "APRIL", "MAY", "JUNE", "JULY", "AUGUST", "SEPTEMBER", "OCTOBER", "NOVEMBER", "DECEMBER"};
+    private final String[] monthInNumber = {"202201", "202202", "202203", "202204", "202205", "202206", "202207", "202208", "202209", "202210", "202211", "202212"};
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -69,7 +69,6 @@ public class Saving extends AppCompatActivity implements View.OnClickListener {
 
     /**
      * OnClick method for each button.
-     * @param v
      */
     @Override
     public void onClick(View v)
@@ -98,7 +97,7 @@ public class Saving extends AppCompatActivity implements View.OnClickListener {
                 monthIncome = Double.parseDouble(res1.getString(1));
             }
             else
-                Toast.makeText(Saving.this, "ERROR HAS OCCUR. PLEASE REPORT THIS BUG." , Toast.LENGTH_SHORT).show();
+                Toast.makeText(Saving.this, "ERROR HAS OCCUR.", Toast.LENGTH_SHORT).show();
 
             // Get all total expenses based on month.
             Cursor res2 = myDB.calculatingTotalExpenseForAllCategory(monthInNumber[i]);
@@ -110,7 +109,7 @@ public class Saving extends AppCompatActivity implements View.OnClickListener {
                     monthExpense = Double.parseDouble(res2.getString(0));
             }
             else
-                Toast.makeText(Saving.this, "ERROR HAS OCCUR. PLEASE REPORT THIS BUG." , Toast.LENGTH_SHORT).show();
+                Toast.makeText(Saving.this, "ERROR HAS OCCUR.", Toast.LENGTH_SHORT).show();
 
             //Calculation.
             totalSaving += ( monthIncome - monthExpense );
@@ -118,7 +117,7 @@ public class Saving extends AppCompatActivity implements View.OnClickListener {
         }
 
         DecimalFormat df = new DecimalFormat("0.00");
-        tvSavings.setText("Total savings: R"+df.format(totalSaving));
+        tvSavings.setText("Total savings:\n\n RS/-" + df.format(totalSaving));
 
     }
 

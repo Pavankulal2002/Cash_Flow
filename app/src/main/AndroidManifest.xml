@@ -9,8 +9,6 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name="com.pavanpradeep.cashflow.ConformationActivity"></activity>
-        <activity android:name="com.pavanpradeep.cashflow.PayNowActivity" />
         <activity android:name="com.pavanpradeep.cashflow.ResetActivity" />
         <activity android:name="com.pavanpradeep.cashflow.PasswordActivity" />
         <activity android:name="com.pavanpradeep.cashflow.LoginActivity" />
@@ -32,9 +30,6 @@
             android:theme="@style/withActionBar" />
         <activity
             android:name="com.pavanpradeep.cashflow.History"
-            android:screenOrientation="portrait" />
-        <activity
-            android:name="com.pavanpradeep.cashflow.Category"
             android:screenOrientation="portrait" />
         <activity
             android:name="com.pavanpradeep.cashflow.Statistic"

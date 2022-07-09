@@ -28,7 +28,7 @@ public class Saving extends AppCompatActivity implements View.OnClickListener {
 
     //Variable to use
     private String[] monthInWords = {"JANUARY", "FEBRUARY", "MARCH", "APRIL", "MAY", "JUNE", "JULY", "AUGUST", "SEPTEMBER", "OCTOBER", "NOVEMBER", "DECEMBER"};
-    private String[] monthInNumber = {"201801", "201802", "201803", "201804", "201805", "201806", "201807", "201808", "201809", "201810", "201811", "201812"};
+    private String[] monthInNumber = {"202201", "202202", "202203", "202204", "202205", "202206", "202207", "202208", "202209", "202210", "202211", "202212"};
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

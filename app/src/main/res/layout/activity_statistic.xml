@@ -38,7 +38,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_marginTop="60dp"
-        android:background="@drawable/banknote"
+        android:background="@drawable/cashflow"
         android:backgroundTint="@color/colorAccent"
         app:layout_constraintTop_toTopOf="parent"></com.github.mikephil.charting.charts.BarChart>
 

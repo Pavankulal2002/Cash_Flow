@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/banknote"
+    android:background="@drawable/cashflow"
     android:backgroundTint="@color/colorAccent"
     android:padding="10dp"
     tools:context=".ResetActivity">
@@ -31,7 +31,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/password_reset"
-        android:layout_marginTop="50dp"
+        android:layout_marginTop="36dp"
         android:hint="Re-type Password" />
 
     <Button

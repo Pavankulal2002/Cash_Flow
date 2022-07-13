@@ -97,8 +97,6 @@ public class BudgetPieChart extends AppCompatActivity implements View.OnClickLis
 
     /**
      * To check table Income is empty or not.
-     * If it is empty, will add Income = 0 for each month.
-     * else, ignore.
      */
     private void settingMonthlyIncome()
     {
@@ -162,8 +160,6 @@ public class BudgetPieChart extends AppCompatActivity implements View.OnClickLis
 
     /**
      * To check in current month have income or not.
-     * If it have income, it will return the amount of income.
-     * Else, return 0.
      */
     private String whatToDisplayMonthlyIncome()
     {
@@ -177,7 +173,6 @@ public class BudgetPieChart extends AppCompatActivity implements View.OnClickLis
 
     /**
      * To return month in words.
-     * @return res
      */
     private String getDateAndMonth()
     {
@@ -229,8 +224,6 @@ public class BudgetPieChart extends AppCompatActivity implements View.OnClickLis
 
     /**
      * Process to check if the category STATE is TRUE or FALSE.
-     * If it is TRUE, button will appear.
-     * Else, it will not.
      */
     private void whichToDisplayCategory()
     {
@@ -353,7 +346,6 @@ public class BudgetPieChart extends AppCompatActivity implements View.OnClickLis
 
     /**
      * OnClick method for each button.
-     * @param v
      */
     public void onClick(View v)
     {

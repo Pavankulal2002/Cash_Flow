@@ -28,17 +28,6 @@ public class Splash extends AppCompatActivity {
 
         initComponent();
 
-        //Set GIFImageView resource
-        try{
-            InputStream inputStream = getAssets().open("cash_flow_logo.gif");
-            byte[] bytes = IOUtils.toByteArray(inputStream);
-            gifImageView.setBytes(bytes);
-            gifImageView.startAnimation();
-        }
-        catch (IOException ex)
-        {
-            Toast.makeText(this, "File not found", Toast.LENGTH_SHORT).show();
-        }
 
         //Wait for 2 seconds and start next activity
         new Handler().postDelayed(new Runnable() {
@@ -56,6 +45,5 @@ public class Splash extends AppCompatActivity {
     private void initComponent()
     {
         Log.d(TAG, "initComponent: Initialise all components");
-        gifImageView = findViewById(R.id.splashLogo);
     }
 }

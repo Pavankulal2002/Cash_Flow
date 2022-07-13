@@ -45,7 +45,6 @@ public class DatabaseHelper extends SQLiteOpenHelper
 
     /**
      * Create 4 tables when first time open the apps.
-     * @param db
      */
     @Override
     public void onCreate(SQLiteDatabase db)
@@ -59,9 +58,6 @@ public class DatabaseHelper extends SQLiteOpenHelper
 
     /**
      * Upgrade tables.
-     * @param db
-     * @param oldVersion
-     * @param newVersion
      */
     @Override
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion)
@@ -76,12 +72,6 @@ public class DatabaseHelper extends SQLiteOpenHelper
 
     /**
      * Add row on table Expense.
-     * ID, Expense, Description, Date, Category.
-     * @param expense
-     * @param description
-     * @param date
-     * @param category
-     * @return true if it success add row.
      */
     public boolean insertDataExpense(String expense, String description, String date, String category)
     {
@@ -100,10 +90,6 @@ public class DatabaseHelper extends SQLiteOpenHelper
 
     /**
      * Add row on table Income.
-     * ID, Income, Month.
-     * @param income
-     * @param month
-     * @return true if it success add row.
      */
     public boolean insertDataIncome(String income, String month)
     {
@@ -120,11 +106,6 @@ public class DatabaseHelper extends SQLiteOpenHelper
 
     /**
      * Add row on table Category.
-     * ID, Description, Budget, State.
-     * @param description
-     * @param budget
-     * @param state
-     * @return true if it success add row.
      */
     public boolean insertDataCategory(String description, String budget, String state)
     {
@@ -144,11 +125,6 @@ public class DatabaseHelper extends SQLiteOpenHelper
 
     /**
      * Update row on table Category.
-     * @param id
-     * @param description
-     * @param budget
-     * @param state
-     * @return true if it success update row.
      */
     public boolean updateDataCategory(String id, String description, String budget, String state)
     {
@@ -165,10 +141,6 @@ public class DatabaseHelper extends SQLiteOpenHelper
 
     /**
      * Update row on table Income.
-     * @param id
-     * @param income
-     * @param month
-     * @return true if it success update row.
      */
     public boolean updateMonthlyIncome(String id, String income, String month)
     {
@@ -184,8 +156,6 @@ public class DatabaseHelper extends SQLiteOpenHelper
 
     /**
      * Query select ID, INCOME from Income where MONTH = "query(month)";
-     * @param month
-     * @return ID, Income
      */
     public Cursor getMonthlyIncome(String month)
     {
@@ -197,8 +167,6 @@ public class DatabaseHelper extends SQLiteOpenHelper
 
     /**
      * Query select * from Expense where CATEGORY = query(cat) order by DATE;
-     * @param cat
-     * @return *
      */
     public Cursor getCategoryDataFromExpense(String cat)
     {
@@ -210,8 +178,6 @@ public class DatabaseHelper extends SQLiteOpenHelper
 
     /**
      * Query select DESCRIPTION, STATE, BUDGET from Category where DESCRIPTION = "query(cat)";
-     * @param cat
-     * @return Description, State
      */
     public Cursor getStateForCategory(String cat)
     {
@@ -223,9 +189,6 @@ public class DatabaseHelper extends SQLiteOpenHelper
 
     /**
      * Query select sum(EXPENSE) from Expense where DATE like 'query(date)' and CATEGORY = "query(cat)";
-     * @param date
-     * @param cat
-     * @return sum(EXPENSE)
      */
     public Cursor calculatingTotalExpense(String date, String cat)
     {
@@ -237,8 +200,6 @@ public class DatabaseHelper extends SQLiteOpenHelper
 
     /**
      * Query sum(EXPENSE) from Expense where DATE like 'query(date)';
-     * @param date
-     * @return sum(EXPENSE)
      */
     public Cursor calculatingTotalExpenseForAllCategory(String date)
     {

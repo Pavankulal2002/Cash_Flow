@@ -69,7 +69,6 @@ public class Saving extends AppCompatActivity implements View.OnClickListener {
 
     /**
      * OnClick method for each button.
-     * @param v
      */
     @Override
     public void onClick(View v)

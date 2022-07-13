@@ -77,7 +77,6 @@ public class History extends AppCompatActivity implements View.OnClickListener {
 
     /**
      * OnClick method for each button.
-     * @param v
      */
     @Override
     public void onClick(View v)
@@ -127,8 +126,6 @@ public class History extends AppCompatActivity implements View.OnClickListener {
 
     /**
      * Creating pop up when the user click on category button.
-     * @param title
-     * @param Message
      */
     private void initPopUpShowMessage(String title,String Message)
     {
@@ -141,7 +138,6 @@ public class History extends AppCompatActivity implements View.OnClickListener {
 
     /**
      * Retrieve data from table Expense in the database.
-     * @param cat
      */
     private void retrievingData(String cat)
     {

@@ -1,20 +1,17 @@
 package com.pavanpradeep.cashflow;
 
 import android.content.Intent;
+import android.os.Bundle;
 import android.os.Handler;
 import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
 import android.util.Log;
-import android.widget.Toast;
+
 import com.felipecsl.gifimageview.library.GifImageView;
-import org.apache.commons.io.IOUtils;
-import java.io.IOException;
-import java.io.InputStream;
 
 public class Splash extends AppCompatActivity {
 
     //Log
-    private static String TAG = "Splash";
+    private static final String TAG = "Splash";
 
     //GIF
     private GifImageView gifImageView;
@@ -33,7 +30,7 @@ public class Splash extends AppCompatActivity {
         new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {
-                Splash.this.startActivity(new Intent(Splash.this,RegisterActivity.class)); // Intent to BudgetPieChart activity.
+                Splash.this.startActivity(new Intent(Splash.this, RegisterActivity.class));
                 Splash.this.finish();
             }
         },1800); // 1800ms

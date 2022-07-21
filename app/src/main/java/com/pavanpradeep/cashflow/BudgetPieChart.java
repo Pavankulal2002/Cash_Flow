@@ -35,7 +35,7 @@ public class BudgetPieChart extends AppCompatActivity implements View.OnClickLis
     private TextView MonthLabel, MonthlyIncomeLabel, berapaPercentTV;
     private ProgressBar progressBar;
     private final String[] cat = {"ENTERTAINMENT", "EDUCATION", "HEALTH", "TRANSPORT", "SHOPPING", "PERSONAL CARE", "BILLS", "FOOD"};
-    //  private PieChart pieChart;
+
 
     //Navigation drawer
     DrawerLayout mDrawerLayout;

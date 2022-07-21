@@ -3,8 +3,8 @@ package com.pavanpradeep.cashflow;
 import android.app.AlertDialog;
 import android.content.Intent;
 import android.database.Cursor;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
 import android.widget.ImageButton;
@@ -13,7 +13,7 @@ import android.widget.TextView;
 public class History extends AppCompatActivity implements View.OnClickListener {
 
     //Log
-    private static String TAG = "History";
+    private static final String TAG = "History";
 
     //Database
     DatabaseHelper myDB;
@@ -23,7 +23,7 @@ public class History extends AppCompatActivity implements View.OnClickListener {
     ImageButton backButton, catEntertainmentButton, catEducationButton, catHealthButton, catTransportButton, catShoppingButton, catPersonalCareButton, catBillsButton, catFoodButton;
 
     //Variable to use
-    private String[] cat = {"ENTERTAINMENT", "EDUCATION", "HEALTH", "TRANSPORT", "SHOPPING", "PERSONAL CARE", "BILLS", "FOOD"};
+    private final String[] cat = {"ENTERTAINMENT", "EDUCATION", "HEALTH", "TRANSPORT", "SHOPPING", "PERSONAL CARE", "BILLS", "FOOD"};
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -77,6 +77,8 @@ public class History extends AppCompatActivity implements View.OnClickListener {
 
     /**
      * OnClick method for each button.
+     *
+     * @param v
      */
     @Override
     public void onClick(View v)
@@ -126,6 +128,8 @@ public class History extends AppCompatActivity implements View.OnClickListener {
 
     /**
      * Creating pop up when the user click on category button.
+     * @param title
+     * @param Message
      */
     private void initPopUpShowMessage(String title,String Message)
     {
@@ -138,6 +142,7 @@ public class History extends AppCompatActivity implements View.OnClickListener {
 
     /**
      * Retrieve data from table Expense in the database.
+     * @param cat
      */
     private void retrievingData(String cat)
     {
@@ -151,7 +156,7 @@ public class History extends AppCompatActivity implements View.OnClickListener {
         StringBuffer buffer = new StringBuffer();
         while (res.moveToNext())
         {
-            buffer.append("Expense :R" + res.getString(1) + "\n");
+            buffer.append("Expense :Rs" + res.getString(1) + "\n");
             buffer.append("Description :" + res.getString(2) + "\n");
             temp = res.getString(3).substring(6, 8)+"/"+res.getString(3).substring(4, 6)+"/"+res.getString(3).substring(0, 4);
             Log.d(TAG, "TEMP ---> "+temp);

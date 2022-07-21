@@ -2,12 +2,13 @@ package com.pavanpradeep.cashflow;
 
 import android.content.Intent;
 import android.database.Cursor;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
 import android.widget.ImageButton;
 import android.widget.TextView;
+
 import com.github.mikephil.charting.charts.BarChart;
 import com.github.mikephil.charting.components.AxisBase;
 import com.github.mikephil.charting.components.XAxis;
@@ -16,6 +17,7 @@ import com.github.mikephil.charting.data.BarData;
 import com.github.mikephil.charting.data.BarDataSet;
 import com.github.mikephil.charting.data.BarEntry;
 import com.github.mikephil.charting.formatter.IAxisValueFormatter;
+
 import java.util.ArrayList;
 
 public class Statistic extends AppCompatActivity implements View.OnClickListener{
@@ -24,7 +26,7 @@ public class Statistic extends AppCompatActivity implements View.OnClickListener
     DatabaseHelper myDB;
 
     //Log
-    private static String TAG = "BudgetPieChart";
+    private static final String TAG = "BudgetPieChart";
 
     //Interface
     private ImageButton backButton;
@@ -135,7 +137,7 @@ public class Statistic extends AppCompatActivity implements View.OnClickListener
         barChart.setData(data);
 
         data.setBarWidth(barWidth);
-        barChart.groupBars(1, groupSpace, barSpace);
+        barChart.groupBars(0, groupSpace, barSpace);
 
         XAxis xAxis = barChart.getXAxis();
         xAxis.setValueFormatter(new MyXAxisValueFormatter(month));
@@ -153,7 +155,7 @@ public class Statistic extends AppCompatActivity implements View.OnClickListener
      */
     public class MyXAxisValueFormatter implements IAxisValueFormatter
     {
-        private String[] mValues;
+        private final String[] mValues;
 
         public MyXAxisValueFormatter(String[] values)
         {

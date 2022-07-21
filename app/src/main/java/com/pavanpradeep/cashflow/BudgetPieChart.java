@@ -17,12 +17,10 @@ import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
-import android.widget.ProgressBar;
 import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import java.text.DecimalFormat;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.Locale;
@@ -33,7 +31,7 @@ public class BudgetPieChart extends AppCompatActivity implements View.OnClickLis
 
     //Interface
     private TextView MonthLabel, MonthlyIncomeLabel, berapaPercentTV;
-    private ProgressBar progressBar;
+
     private final String[] cat = {"ENTERTAINMENT", "EDUCATION", "HEALTH", "TRANSPORT", "SHOPPING", "PERSONAL CARE", "BILLS", "FOOD"};
 
 
@@ -92,7 +90,7 @@ public class BudgetPieChart extends AppCompatActivity implements View.OnClickLis
         String monthlyIncomeToDisplay = "Monthly income: "+whatToDisplayMonthlyIncome();
         MonthlyIncomeLabel.setText(monthlyIncomeToDisplay);
 
-        settingProgressBar();
+
     }
 
     /**
@@ -110,53 +108,6 @@ public class BudgetPieChart extends AppCompatActivity implements View.OnClickLis
         }
     }
 
-    /**
-     * To show percentage of the progress bar.
-     */
-    private void settingProgressBar()
-    {
-        dateForProgressBar = currentDate.split("-")[0]+currentDate.split("-")[1]; //YYYYMM
-
-        double totalExpenseForThisMonth = 0, incomeForThisMonth = 0, percentCalculation = 0;
-
-        Cursor res = myDB.calculatingTotalExpenseForAllCategory(dateForProgressBar);
-        if(res != null && res.moveToFirst()) // If the query result is not empty.
-        {
-            Log.d(TAG, "TOTAL EXPENSE FOR THIS MONTH ---> "+res.getString(0));
-            if(res.getString(0) == null)
-                totalExpenseForThisMonth = 0;
-            else
-                totalExpenseForThisMonth = Double.parseDouble(res.getString(0));
-        }
-
-        Cursor res2 = myDB.getMonthlyIncome(monthToDisplay);
-        if(res2 != null && res2.moveToFirst()) // If the query result is not empty.
-        {
-            Log.d(TAG, "MONTHLY INCOME FOR THIS MONTH ---> "+res2.getString(1));
-            if(res2.getString(1) == null)
-                incomeForThisMonth = 0;
-            else
-                incomeForThisMonth = Double.parseDouble(res2.getString(1));
-        }
-
-        //Calculating SAVINGS
-        savings = incomeForThisMonth - totalExpenseForThisMonth;
-        Log.d(TAG, "SAVINGSSSS ---> "+savings);
-
-        //Change it into percentage
-        percentCalculation =  (savings/incomeForThisMonth) * 100;
-        int percentToDisplay = (int) percentCalculation;
-        Log.d(TAG, "PERCENT CALCULATION ---> "+percentCalculation);
-        Log.d(TAG, "PERCENT TO DISPLAY ---> "+percentToDisplay);
-
-        if(savings == 0 && incomeForThisMonth == 0)
-            return;
-
-        progressBar.setProgress(percentToDisplay);
-
-        DecimalFormat df = new DecimalFormat("#0.00");
-        berapaPercentTV.setText(df.format(percentToDisplay)+"%");
-    }
 
     /**
      * To check in current month have income or not.
@@ -322,7 +273,7 @@ public class BudgetPieChart extends AppCompatActivity implements View.OnClickLis
         changeIncome = findViewById(R.id.changeIncome);
         MonthLabel = findViewById(R.id.MonthLabel);
         MonthlyIncomeLabel = findViewById(R.id.MonthlyIncomeLabel);
-        progressBar = findViewById(R.id.progressBar);
+       // progressBar = findViewById(R.id.progressBar);
         mDrawerLayout = findViewById(R.id.mDrawerLayout);
         berapaPercentTV = findViewById(R.id.berapaPercentTV);
     }
@@ -459,7 +410,7 @@ public class BudgetPieChart extends AppCompatActivity implements View.OnClickLis
                     myDB.insertDataExpense(expense, description, date, category.toUpperCase());
                     Toast.makeText(BudgetPieChart.this, "Add success" , Toast.LENGTH_SHORT).show();
                     dialogExpense.cancel();
-                    settingProgressBar();
+                    //settingProgressBar();
                 }
                 else
                 {
@@ -514,7 +465,7 @@ public class BudgetPieChart extends AppCompatActivity implements View.OnClickLis
                         if(changeMonthlyIncomeSpinnerRes.equalsIgnoreCase(monthToDisplay)) // If user choose the month same with system month. Example user choose = "JUNE", system = "JUNE".
                         {
                             MonthlyIncomeLabel.setText("Monthly income: "+varMonthlyIncome);
-                            settingProgressBar();
+                            //settingProgressBar();
                         }
                     }
                     else
